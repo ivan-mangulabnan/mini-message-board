@@ -2,6 +2,7 @@ import express from 'express';
 import path from 'path';
 import { fileURLToPath } from 'url';
 import newRouter from './routes/new.js';
+import messageRouter from './routes/messages.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -23,6 +24,7 @@ app.set('messages', messages);
 
 app.use(express.urlencoded({ extended: true }));
 app.use('/new', newRouter);
+app.use('/messages', messageRouter);
 
 app.get('/', (req, res) => {
   res.render('index', { links, messages });

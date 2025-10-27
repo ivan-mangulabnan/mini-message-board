@@ -11,6 +11,7 @@ newRouter.post('/', (req, res) => {
   const messages = req.app.get('messages');
   
   const newMessage = {
+    id: crypto.randomUUID(),
     text: req.body.message,
     user: req.body.author,
     added: new Date()

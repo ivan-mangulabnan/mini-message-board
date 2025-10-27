@@ -14,9 +14,12 @@
     <ul>
       <% messages.forEach(message => { %>
         <li>
-          <h3><%= message.text %></h3>
-          <p>from: <%= message.user %></p>
-          <p>on: <%= message.added %></p>
+          <h3>
+            FROM: <%= message.user %>
+            <span style="margin-left: 1rem;">
+              <a href="/messages/<%=message.id %>">OPEN</a>
+            </span>
+          </h3>
         </li>
       <% }) %>
     </ul>
