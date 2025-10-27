@@ -19,7 +19,9 @@ const messages = [];
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.set('links', links);
+app.set('messages', messages);
 
+app.use(express.urlencoded({ extended: true }));
 app.use('/new', newRouter);
 
 app.get('/', (req, res) => {
