@@ -4,6 +4,7 @@
     "express": "^5.1.0"
   },
   "name": "mini-message-board",
+  "type": "module",
   "version": "1.0.0",
   "description": "NODE JS project.  \r using EJS as Template Engine.",
   "main": "index.js",
