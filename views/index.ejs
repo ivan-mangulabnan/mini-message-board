@@ -6,6 +6,7 @@
   <title>Index</title>
 </head>
 <body>
+  <%- include('navbar', { links }) %>
   <h1>Messages</h1>
   <% if (messages.length <= 0) { %>
     <h2>No Messages Yet</h2>
