@@ -12,11 +12,13 @@ const PORT = 6969;
 const links = [
   { href: '/', name: 'Home' },
   { href: '/new', name: 'New Message' }
-]
+];
+
 const messages = [];
 
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.set('links', links);
 
 app.use('/new', newRouter);
 
